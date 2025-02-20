@@ -4,6 +4,7 @@ import './App.css'
 
 function App() {
   const [ num, setNum ] = useState(0);
+  const [ texto, setTexto ] = useState('');
 
   function contar(){
     setNum(num + 1);
@@ -15,7 +16,11 @@ function App() {
         <h3>O valor do contador = {num}</h3>
         <button
             onClick={contar}
-        >Contar</button>
+        >Contar</button><br/>
+        <input type="text" onChange={ e => setTexto(e.target.value)} />
+        <p>{texto}</p>
+        
+      
     </>
   )
 }
